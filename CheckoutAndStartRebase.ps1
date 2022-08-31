@@ -41,6 +41,17 @@ Function CheckoutAndStartRebase {
 	} else {
 		git rebase main 
 	}
+	
+	if ($ChangedFileCount -gt 0){
+		$shouldGetUncommitedFiles = Read-Host -Prompt 'Enter ''Y'' to pop uncommited changes back onto your branch'
+		if ($shouldGetUncommitedFiles.ToUpper() -eq 'Y') {
+			git stash pop
+		} else{
+			Write-Host '=============================================================' -ForegroundColor 'DarkYellow'
+			Write-Host 'Your uncommited chnages on $currentBranch will be in your stash under the entry ''Rebase Stash'' '-ForegroundColor 'DarkYellow'
+			Write-Host '=============================================================' -ForegroundColor 'DarkYellow'
+		}
+	}
 }
 
 CheckoutAndStartRebase
