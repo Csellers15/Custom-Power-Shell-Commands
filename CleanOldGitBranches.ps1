@@ -32,3 +32,5 @@ Function CleanOldGitBranches {
 		Write-Host 'Okey Doke.  Not doing anything.' -ForegroundColor 'DarkGreen'
 	}
 }
+
+CleanOldGitBranches 
