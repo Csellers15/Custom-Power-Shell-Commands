@@ -1,4 +1,6 @@
 Function CleanOldGitBranches {
+	# All Credit to Chuck Blaine on this command I had no parrt in its creation 
+
 	# Prune branches
 	Write-Host ''
 	git remote prune origin;
