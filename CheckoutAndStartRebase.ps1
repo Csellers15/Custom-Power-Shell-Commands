@@ -42,6 +42,13 @@ Function CheckoutAndStartRebase {
 		git rebase main 
 	}
 	
+	#Redoing this command to verify we are not on main before pushing
+	$currentBranch = git branch --show-current 
+	$forcePush = Read-Host -Prompt 'Enter ''Y'' to do interactive rebase or anything else will do a non interactive rebase'
+	if(($currentBranch -ne "main") -and ($forcePush.ToUpper() -eq 'Y')){
+		git push --force
+	}
+	
 	if ($ChangedFileCount -gt 0){
 		$shouldGetUncommitedFiles = Read-Host -Prompt 'Enter ''Y'' to pop uncommited changes back onto your branch'
 		if ($shouldGetUncommitedFiles.ToUpper() -eq 'Y') {
