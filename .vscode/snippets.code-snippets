@@ -1,0 +1,15 @@
+{
+	"Launch Configuration (Powershell)": {
+		"prefix": "pslaunchConfiguration",
+		"description": "launch.json configuration entry for Powershell scripts",
+		"body": [
+			"{",
+			"\t\"name\": \"SCRIPT NAME\"",
+			"\t\"type\": \"PowerShell\"",
+			"\t\"request\": \"launch\"",
+			"\t\"script\": \"${workspaceFolder}\\SCRIPTNAME.ps1\"",
+			"\t\"cwd\": \"${workspaceFolder}\"",
+			"}"
+		]
+	}
+}

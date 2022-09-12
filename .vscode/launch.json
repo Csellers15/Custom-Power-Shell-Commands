@@ -1,0 +1,33 @@
+{
+    "version": "0.0.1",
+    "configurations": [
+		{
+            "name": "Launch Git Commit and Push",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\GitCommitAndPush.ps1",
+            "cwd": "${workspaceFolder}",
+        },
+		{
+            "name": "Launch Checkout and Rebase",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\CheckoutAndStartRebase.ps1",
+            "cwd": "${workspaceFolder}",
+        },
+		{
+			"name": "Clean Old Git Branches",
+			"type": "PowerShell",
+			"request": "launch",
+			"script": "${workspaceFolder}\\CleanOldGitBranches.ps1",
+			"cwd": "${workspaceFolder}"
+		}, 
+		{
+			"name": "Check Global NPM Packages",
+			"type": "PowerShell",
+			"request": "launch",
+			"script": "${workspaceFolder}\\CheckGlobalNPMPackages.ps1",
+			"cwd": "${workspaceFolder}"
+		},
+    ]
+}
