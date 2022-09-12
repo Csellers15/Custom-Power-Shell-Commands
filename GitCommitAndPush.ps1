@@ -22,7 +22,7 @@ function GitCommitAndPush {
 	Write-Host '' 
 	Write-Host ''
 	Write-Host '=============================================================' -ForegroundColor 'DarkGreen'
-	$commitMessage = Read-Host -Prompt 'Enter a commit message'
+	$commitMessage = Read-Host -Prompt 'Enter a single line commit message'
 	Write-Host '=============================================================' -ForegroundColor 'DarkGreen'
 
 	git add .
